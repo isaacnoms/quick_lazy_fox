@@ -4,11 +4,9 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 
 phrase = input('Enter phrase to check: ').lower()
 
-for n in range(len(phrase)):
-	if phrase[n] in alphabet:
-		alphabet.remove(phrase[n])
-	else: 
-		continue
+for n in phrase:
+	if n in alphabet:
+		alphabet.remove(n)
 
 if len(alphabet) > 0:
 	print('The unused letters were: ' + ', '.join(alphabet))
