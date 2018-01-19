@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = list(map(chr, range(ord('a'), ord('z')+1))) # generate alphabet as list
 
 phrase = input('Enter phrase to check: ').lower()
 
