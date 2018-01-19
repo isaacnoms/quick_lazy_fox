@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
+import string
 
-alphabet = list(map(chr, range(ord('a'), ord('z')+1))) # generate alphabet as list
+alphabet = list(string.ascii_lowercase)
 
 phrase = input('Enter phrase to check: ').lower()
 
