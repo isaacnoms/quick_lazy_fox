@@ -9,8 +9,5 @@ with open('common_words.txt') as words_file:
 		word = word.strip()
 		words_list.append(word)
 
-check = input ('> ')
-
-while check == '':
+while input ('> ') == '':
 	print(random.choice(words_list))
-	check = input ('> ')
