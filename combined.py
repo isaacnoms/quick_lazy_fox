@@ -2,10 +2,10 @@
 import random
 
 words_list = []
-cut_off = 50
+cut_off = 80
 phrase = 'the quick brown fox jumps over the lazy dog' #len == 43
 
-with open('words.txt') as words_file:
+with open('google_words.txt') as words_file:
 	for word in words_file:
 		word = word.strip()
 		word = word.lower()
