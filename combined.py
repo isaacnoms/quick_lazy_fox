@@ -5,18 +5,25 @@ words_list = []
 cut_off = 80
 phrase = 'the quick brown fox jumps over the lazy dog' #len == 43
 
-smallest = open('smallest.txt', 'r')
-smallest = smallest.read()
-smallest_len = len(smallest)
-smallest = smallest.split(' ')
-
-
 with open('common_words.txt') as words_file:
 	for word in words_file:
 		word = word.strip()
 		word = word.lower()
 		words_list.append(word)
 words_file.close()
+
+try:
+	smallest = open('smallest.txt', 'r')
+	smallest = smallest.read()
+	smallest_len = len(smallest)
+	smallest = smallest.split(' ')
+
+except FileNotFoundError:
+	smallest = words_list
+	smallest_len = len(smallest)
+
+
+
 
 def create():
 	alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
